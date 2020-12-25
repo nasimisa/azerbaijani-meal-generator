@@ -1,0 +1,241 @@
+/*********** BASE STYLES **************/
+
+/* color palette:
+#ffd634 - yellow
+#161616 - black
+#fff - white */
+
+* {
+  margin: 0;
+  padding: 0;
+  overflow: visible;
+  font-family: 'Inconsolata', monospace;
+  font-size: 100%;
+  border-radius: 5px;
+  scroll-behavior: smooth;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  background: url('./images/background.jpg') no-repeat center center;
+  background-size: cover;
+  height: 100%;
+}
+
+main {
+  background: #fff;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border: 3px solid #ffd634;
+  border-radius: 50px;
+}
+
+/*********** FORM STYLES **************/
+
+h1 {
+  text-align: center;
+  background: #ffd634;
+  font-weight: 600;
+  margin: 15px;
+  margin-bottom: 20px;
+  font-size: 25px;
+}
+
+h4 {
+  background: #ffd634;
+  width: max-content;
+}
+
+form,
+article {
+  margin: 10px 30px;
+}
+
+article {
+  margin-top: 15px;
+}
+
+input[type='radio'] {
+  /* remove standard background appearance */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /* create custom radio button appearance */
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  padding: 4px;
+  /* background-color only for content */
+  background-clip: content-box;
+  border: 2px solid #bbbbbb;
+  background-color: #e7e6e7;
+  border-radius: 50%;
+  position: relative;
+  top: 5px;
+}
+
+/* appearance for checked radio button */
+input[type='radio']:checked {
+  background-color: #ffd634;
+  outline: none;
+}
+
+input[type='radio']:active {
+  outline: none;
+}
+
+button {
+  transition: all 0.3s linear;
+  background: #fff;
+  border: 1px solid #ffd634;
+  border-radius: 10px;
+  padding: 5px;
+  color: #ffd634;
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+button:hover {
+  background: #ffd634;
+  color: #fff;
+}
+
+button:active {
+  transition: all 0.3s linear;
+  transform: scale(0.8);
+}
+
+button:focus {
+  outline: none;
+}
+
+/*********** RANDOM MEAL STYLES **************/
+
+.meal-icons {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.icon-container {
+  background: #ffd634;
+  width: 60px;
+  border-radius: 100px;
+  text-align: center;
+  margin-right: 10px;
+}
+
+.icon-container p {
+  margin-top: 10px;
+}
+
+.icon-container .number {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.icon-container .text {
+  font-size: 0.8rem;
+}
+
+.icon-container i {
+  background: #fff;
+  border-radius: 100%;
+  padding: 15px;
+  font-size: 1.1rem;
+  margin-top: 5px;
+}
+
+h2 {
+  text-decoration: underline;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.ingredients h4,
+.directions h4 {
+  background: #fff;
+  text-decoration: underline;
+}
+
+.description {
+  text-align: justify;
+}
+
+.random-meal {
+  transition: all 0.3s linear;
+}
+
+li::marker {
+  color: #ffd634;
+  font-weight: bold;
+}
+
+ol li:before {
+  background-color: #ffd634;
+  border-radius: 100%;
+  padding: 3px 1px;
+  padding-left: 10px;
+  font-weight: bold;
+}
+
+/*change style of ordered list  */
+
+ol {
+  counter-reset: myOrderedListItemsCounter;
+  padding-left: 0;
+}
+
+ol li {
+  list-style-type: none;
+}
+
+ol li:before {
+  counter-increment: myOrderedListItemsCounter;
+  content: counter(myOrderedListItemsCounter) ' ';
+  margin-right: 0.5em;
+}
+
+form p {
+  font-size: 12px;
+  text-align: justify;
+}
+
+.no-meals {
+  color: #161616;
+  background: #ffd634;
+  font-weight: bold;
+  text-align: center;
+}
+
+#difficulty {
+  outline: none;
+}
+
+/*********** MEDIA QUERIES **************/
+
+/* medium screen size */
+@media (min-width: 768px) {
+  /* to make meal appear side by side */
+  main {
+    display: flex;
+  }
+
+  /* to keep the phone look */
+  .desktop-main {
+    max-width: 380px;
+  }
+
+  .no-meals {
+    margin-top: 300px;
+  }
+}

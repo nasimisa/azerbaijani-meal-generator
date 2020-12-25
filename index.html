@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="recipe generator app - creating random Azerbaijani meals" />
+    <meta name="keywords" content="recipes, meals, Azerbaijani meals" />
+    <meta name="author" content="Nasimi Sadiq" />
+
+    <title>Azerbaijani Meal Recipes</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+      integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I"
+      crossorigin="anonymous"
+    />
+
+    <!-- font awesome icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
+
+    <!-- Custom CSS -->
+    <link href="style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- NOTE: Bootstrap is only used in LAYOUT of content-->
+
+    <main class="container col-10 desktop-main">
+      <form action="" method="get" class="container">
+        <div class="meal-type">
+          <h1>Your Azerbaijani meal for today 🥧👨🏻‍🍳</h1>
+          <h4>🍴What would you like ?</h4>
+          <input type="radio" name="meal" id="salad" value="salads" checked />
+          <label for="salad">🥗Salad</label><br />
+          <input type="radio" name="meal" id="soup" value="soups" />
+          <label for="soup">🍲Soups and Stews</label><br />
+          <input type="radio" name="meal" id="meat" value="meat" />
+          <label for="meat">🍖Meat</label><br />
+          <input type="radio" name="meal" id="vegetarian" value="vegetarian" />
+          <label for="vegetarian">🥦Vegetarian</label><br />
+          <input type="radio" name="meal" id="dessert" value="dessert" />
+          <label for="dessert">🍰Dessert</label><br />
+        </div>
+        <br />
+        <div class="difficulty-level">
+          <label for="difficulty"><h4>😅Difficulty Level:</h4></label><br />
+          <select name="difficulty" id="difficulty">
+            <option value="Easy">Easy</option>
+            <option value="Moderate">Moderate</option>
+            <option value="Difficult">Difficult</option>
+          </select>
+        </div>
+        <br />
+        <div class="time-for-cooking">
+          <h4>🕒Time for cooking:</h4>
+          <input type="radio" name="time" id="15min" value="15min." checked />
+          <label for="15min">15 min.</label><br />
+          <input type="radio" name="time" id="30min" value="30min." />
+          <label for="30min">30 min.</label><br />
+          <input type="radio" name="time" id="45min" value="45min." />
+          <label for="45min">45 min.</label><br />
+          <input type="radio" name="time" id="1hour" value="1hour" />
+          <label for="1hour">1 hour</label><br />
+          <input type="radio" name="time" id="2hour" value="2hours" />
+          <label for="2hour">2 hours</label><br />
+          <input type="radio" name="time" id="3hour" value="3hours" />
+          <label for="3hour">3 hours or more</label><br />
+        </div>
+        <button type="button">SURPRISE ME</button><br /><br />
+        <p>
+          Note: All the recipes are from different sources including Farida Buyuran (Az CookBook),
+          Flavours of baku, Azerifood.com, Azerbaijan national culinary center, Azerbaijani Girl
+          Cooks etc.
+        </p>
+      </form>
+    </main>
+
+    <!-- javascript -->
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
